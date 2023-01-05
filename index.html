@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily challenge: Letters</title>
+</head>
+<body>
+    <form name="myform">
+        <input type="text" name="letters" id="letters" placeholder="Type only letters" />
+        <br>
+    </form>
+    <script>
+        // 1. Create an input type text that takes/shows only letters. (ie. numbers and special characters won’t be accepted)
+        let input = document.getElementById('letters')
+        input.addEventListener("keydown", (e) => {
+            if(!(e.keyCode >= 65 && e.keyCode <=90) && e.keyCode != 8) // only from A to Z or [backspace]
+                e.preventDefault()
+        })
+    </script>
+</body>
+</html>
